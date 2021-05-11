@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white-50: rgb(231, 236, 238);
+  --beige-200: #dcd9a4;
+  --brown-500: #917d2e;
+  --brown-800: #493f16;
+  --green-500: #738d2a;
+}
+
+body {
+  background-color: var(--beige-200);
+  color: var(--white-50);
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px var(--brown-500);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  align-items: center;
+  background-image: url("images/bamboo.jpg");
+  box-shadow: 0 2px 8px 1px ;
+  display: flex;
+  font-size: 1.1rem;
+  min-height: 20vh;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  animation: text-h1;
+  animation-duration: 8s;
+  animation-iteration-count: initial;
+  animation-timing-function: steps(26);
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes text-h1 {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%       /* 15px */
+  }
+
+  h1 {
+    animation-timing-function: steps(12);
+    animation-duration: 4s;
+  }
+
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%        /* 14px */
+  }
+
+  h1 {
+    animation-timing-function: steps(12);
+    animation-duration: 4s;
+  }
+
+  footer {
+    font-size: 1.1rem;
+  }
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 1.5rem;
+  min-height: 45vh;
+  max-height: fit-content;
+  text-align: center;
+  padding: 2rem;
+}
+
+button {
+  background-color: var(--brown-500);
+  border: 1px outset var(--white-50);
+  border-radius: 1rem;
+  color: var(--white-50);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 3.5rem;
+  padding: 1rem;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: var(--green-500);
+  border: 1px inset var(--white-50);
+  text-shadow: 4px 1px 3px var(--brown-800);
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--green-500);
+  text-decoration: none;
+  position: relative;
+}
+
+footer a:hover {
+  color: var(--brown-500);
+  text-decoration: underline;
+}
+
+footer a img {
+  position: absolute;
+  top: -2.5rem;
+  left: 0.5rem;
+  z-index: -1;
+}
