@@ -25,7 +25,7 @@ body {
 header {
   align-items: center;
   background-image: url("images/bamboo.jpg");
-  box-shadow: 0 2px 8px 1px ;
+  box-shadow: 0 2px 8px 1px var(--white-50);
   display: flex;
   font-size: 1.1rem;
   min-height: 20vh;
@@ -118,7 +118,7 @@ button {
 button:hover {
   background-color: var(--green-500);
   border: 1px inset var(--white-50);
-  text-shadow: 4px 1px 3px var(--brown-800);
+  text-shadow: 2px -2px 3px var(--brown-800);
 }
 
 footer {
